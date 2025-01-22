@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/SalesforcePortfolio/', // This should match your repository name
+  base: '/nikhilshivpuriya29.github.io/', // This should match your repository name
 });
