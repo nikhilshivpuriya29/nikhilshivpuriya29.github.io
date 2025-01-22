@@ -1,13 +1,373 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Shivpuriya - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .hover-underline:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #2563eb;
+            transform: scaleX(1);
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
+        <!-- Header -->
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-2xl font-bold text-blue-600">Nikhil Shivpuriya</h1>
+                    <nav class="flex space-x-6">
+                        <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">About</a>
+                        <a href="#experience" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">Experience</a>
+                        <a href="#skills" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">Skills</a>
+                        <a href="#education" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">Education</a>
+                        <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+            <!-- Hero Section -->
+            <section class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-48 h-48 rounded-full overflow-hidden ring-4 ring-blue-100 shadow-lg">
+                        <img 
+                            src="https://media.licdn.com/dms/image/v2/D4D03AQEWJRS6V7pUbA/profile-displayphoto-shrink_800_800/B4DZR_PZkdHkAc-/0/1737301531993?e=1743033600&v=beta&t=b9Gz_yFIe4QMi6iOAOcwHsyn_FRFKIvLSd-fqbqcUJE" 
+                            alt="Nikhil Shivpuriya"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Software Developer & AI Engineer</h2>
+                        <p class="text-lg text-blue-600 mb-4">6x Salesforce Certified | AI & Machine Learning | Full-Stack Development</p>
+                        <p class="text-gray-600 mb-6">
+                            Passionate about tech and innovation. Proficient in C, C++, Python, Java, JavaScript, and Apex. 
+                            Excited about Machine Learning and NLP. Let's connect and explore new horizons!
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                            <a 
+                                href="https://www.linkedin.com/in/nikhilshivpuriya/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                            >
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                LinkedIn
+                            </a>
+                            <a 
+                                href="https://github.com/nikhilshivpuriya29" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900 transition-colors"
+                            >
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                                GitHub
+                            </a>
+                            <a 
+                                href="https://drive.google.com/file/d/18gi9N4RcLFvh5sp3JQUhHSuKNqd1rd1_/view?usp=sharing" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition-colors"
+                            >
+                                <i data-lucide="file-text" class="w-5 h-5"></i>
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">About Me</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            Fueled by Curiosity, Driven by Innovation. Passionate about turning ideas into impactful solutions, 
+                            I thrive on exploring the intersection of technology and creativity. From developing robust software 
+                            to diving deep into the intricacies of AI and Machine Learning, I continuously seek opportunities to 
+                            learn, grow, and make a difference. Let's innovate together and create something extraordinary!
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                <i data-lucide="calendar" class="w-5 h-5 text-blue-600"></i>
+                                <div>
+                                    <p class="text-sm text-gray-500">Birthday</p>
+                                    <p class="text-gray-700">29 Oct 2000</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i>
+                                <div>
+                                    <p class="text-sm text-gray-500">City</p>
+                                    <p class="text-gray-700">Indore, India</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                <i data-lucide="graduation-cap" class="w-5 h-5 text-blue-600"></i>
+                                <div>
+                                    <p class="text-sm text-gray-500">Degree</p>
+                                    <p class="text-gray-700">B.Tech in CSE</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                <i data-lucide="mail" class="w-5 h-5 text-blue-600"></i>
+                                <div>
+                                    <p class="text-sm text-gray-500">Email</p>
+                                    <p class="text-gray-700 break-all">nikhilshivpuriya91593@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-4">Certifications</h4>
+                            <div class="space-y-4" id="certifications">
+                                <!-- Certifications will be added dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Professional Experience</h3>
+                <div class="space-y-8">
+                    <!-- Salesforce Developer Role -->
+                    <div class="relative pl-8 pb-8 border-l-2 border-blue-200">
+                        <div class="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-0"></div>
+                        <div class="space-y-4">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h4 class="text-xl font-semibold text-gray-900">Salesforce Developer</h4>
+                                <span class="text-blue-600">@ Cloud SynApps</span>
+                            </div>
+                            <p class="text-gray-600">2023 - Present • Pune, India</p>
+                            <div class="prose text-gray-600">
+                                <ul class="list-disc pl-4 space-y-2">
+                                    <li>Developed and integrated the CSA AI (Currently on App-Exchange) using OpenAI's CustomGPT.</li>
+                                    <li>Led key features of a client's Grant Management portal.</li>
+                                    <li>Recognized with 'Outstanding Team Player' award.</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2" id="salesforce-skills">
+                                <!-- Skills will be added dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MEVN Trainee Role -->
+                    <div class="relative pl-8 pb-8 border-l-2 border-blue-200">
+                        <div class="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-0"></div>
+                        <div class="space-y-4">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h4 class="text-xl font-semibold text-gray-900">MEVN Trainee</h4>
+                                <span class="text-blue-600">@ Fynd Academy</span>
+                            </div>
+                            <p class="text-gray-600">January 2023 - June 2023 • Remote</p>
+                            <div class="prose text-gray-600">
+                                <ul class="list-disc pl-4 space-y-2">
+                                    <li>Developed expertise in MEVN stack technologies.</li>
+                                    <li>Created 4 websites as a part of project within 1.5 months.</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2" id="mevn-skills">
+                                <!-- Skills will be added dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Skills</h3>
+                <p class="text-gray-600 mb-8">
+                    Here are the tools, technologies, and abilities that help me craft innovative solutions and deliver impactful results.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="skills-grid">
+                    <!-- Skills will be added dynamically -->
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Education</h3>
+                <div class="space-y-8">
+                    <div class="border-l-4 border-blue-600 pl-4 hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                        <h4 class="text-xl font-semibold text-gray-900">B.Tech in Computer Science and Engineering</h4>
+                        <p class="text-gray-600">Samrat Ashok Technological Institute, Vidisha • 2019 - 2023</p>
+                        <p class="text-blue-600">CGPA: 8.44</p>
+                        <p class="text-gray-600">Rajiv Gandhi Proudyogiki Vishwavidyalaya</p>
+                    </div>
+                    <div class="border-l-4 border-blue-600 pl-4 hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                        <h4 class="text-xl font-semibold text-gray-900">Senior Secondary (PCM)</h4>
+                        <p class="text-gray-600">Sahara Public School • 2018</p>
+                        <p class="text-blue-600">Percentage: 78%</p>
+                        <p class="text-gray-600">Central Board of Secondary Education</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <a 
+                        href="https://www.linkedin.com/in/nikhilshivpuriya/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all"
+                    >
+                        <i data-lucide="linkedin" class="w-6 h-6 text-blue-600"></i>
+                        <div>
+                            <h4 class="font-semibold">LinkedIn</h4>
+                            <p class="text-sm text-gray-600">Connect with me</p>
+                        </div>
+                        <i data-lucide="external-link" class="w-5 h-5 ml-auto text-gray-400"></i>
+                    </a>
+                    <a 
+                        href="https://github.com/nikhilshivpuriya29"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all"
+                    >
+                        <i data-lucide="github" class="w-6 h-6 text-blue-600"></i>
+                        <div>
+                            <h4 class="font-semibold">GitHub</h4>
+                            <p class="text-sm text-gray-600">View my projects</p>
+                        </div>
+                        <i data-lucide="external-link" class="w-5 h-5 ml-auto text-gray-400"></i>
+                    </a>
+                    <a 
+                        href="mailto:nikhilshivpuriya91593@gmail.com"
+                        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all"
+                    >
+                        <i data-lucide="mail" class="w-6 h-6 text-blue-600"></i>
+                        <div>
+                            <h4 class="font-semibold">Email</h4>
+                            <p class="text-sm text-gray-600">Send me a message</p>
+                        </div>
+                    </a>
+                    <a 
+                        href="tel:+917771928222"
+                        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all"
+                    >
+                        <i data-lucide="phone" class="w-6 h-6 text-blue-600"></i>
+                        <div>
+                            <h4 class="font-semibold">Phone</h4>
+                            <p class="text-sm text-gray-600">+91 777 1928 222</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-white border-t">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <p class="text-center text-gray-600">
+                    © <span id="current-year"></span> Nikhil Shivpuriya. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Add certifications
+        const certifications = [
+            {
+                title: "Salesforce Certified AI Specialist",
+                description: "Advanced certification in Salesforce AI implementation and integration"
+            },
+            {
+                title: "Salesforce Certified AI Associate",
+                description: "Specialized certification in Salesforce AI fundamentals"
+            },
+            {
+                title: "Salesforce Certified JavaScript Developer I",
+                description: "Expert-level certification in JavaScript development for Salesforce"
+            },
+            {
+                title: "Salesforce Certified OmniStudio Developer",
+                description: "Specialized in OmniStudio development and implementation"
+            },
+            {
+                title: "Salesforce Certified Platform Developer I",
+                description: "Core certification in Salesforce platform development"
+            },
+            {
+                title: "Salesforce Certified Administrator",
+                description: "Foundation certification in Salesforce administration"
+            }
+        ];
+
+        document.getElementById('certifications').innerHTML = certifications.map(cert => `
+            <a href="#" class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+                <i data-lucide="award" class="w-6 h-6 text-blue-600 flex-shrink-0"></i>
+                <div>
+                    <h5 class="font-semibold text-gray-900">${cert.title}</h5>
+                    <p class="text-sm text-gray-600">${cert.description}</p>
+                </div>
+            </a>
+        `).join('');
+
+        // Add skills
+        const skills = [
+            { name: "Salesforce Development", percentage: 100 },
+            { name: "CSS", percentage: 97 },
+            { name: "C/C++", percentage: 95 },
+            { name: "JAVA", percentage: 98 },
+            { name: "JavaScript", percentage: 85 },
+            { name: "HTML", percentage: 100 },
+            { name: "WordPress/CMS", percentage: 90 },
+            { name: "Machine Learning", percentage: 82 },
+            { name: "Python", percentage: 100 },
+            { name: "Apex", percentage: 97 }
+        ];
+
+        document.getElementById('skills-grid').innerHTML = skills.map(skill => `
+            <div class="space-y-2 p-4 rounded-lg hover:bg-blue-50 transition-colors">
+                <div class="flex justify-between">
+                    <span class="text-gray-700 font-medium">${skill.name}</span>
+                    <span class="text-blue-600">${skill.percentage}%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-blue-600 h-2.5 rounded-full transition-all duration-500" style="width: ${skill.percentage}%"></div>
+                </div>
+            </div>
+        `).join('');
+
+        // Add experience skills
+        const salesforceSkills = ['APEX', 'JavaScript', 'OmniStudio', 'LWC', 'Aura Framework', 'Flows', 'OpenAI'];
+        document.getElementById('salesforce-skills').innerHTML = salesforceSkills.map(tech => `
+            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">${tech}</span>
+        `).join('');
+
+        const mevnSkills = ['MongoDB', 'Express.js', 'Vue.js', 'Node.js', 'JavaScript'];
+        document.getElementById('mevn-skills').innerHTML = mevnSkills.map(tech => `
+            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">${tech}</span>
+        `).join('');
+
+        // Re-initialize icons after dynamic content
+        lucide.createIcons();
+    </script>
+</body>
 </html>
