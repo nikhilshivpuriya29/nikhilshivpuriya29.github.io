@@ -6,5 +6,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/', // Updated to match the root domain
+  base: '/nikhilshivpuriya29.github.io/', // Update this to match your repository name
 });
