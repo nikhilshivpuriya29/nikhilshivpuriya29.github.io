@@ -18,23 +18,78 @@
             transform: scaleX(1);
             transition: transform 0.2s ease;
         }
+
+        /* Mobile menu styles */
+        .mobile-menu-button {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+            .mobile-menu-button {
+                display: block;
+            }
+            .mobile-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+            .mobile-menu a {
+                display: block;
+                padding: 0.75rem 0;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            .mobile-menu a:last-child {
+                border-bottom: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
-        <!-- Header -->
+        <!-- Header with fixed responsive navigation -->
         <header class="bg-white shadow-sm sticky top-0 z-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                 <div class="flex items-center justify-between">
                     <h1 class="text-2xl font-bold text-blue-600">Nikhil Shivpuriya</h1>
-                    <nav class="flex space-x-6">
+                    
+                    <!-- Desktop Menu -->
+                    <nav class="desktop-menu hidden md:flex space-x-6">
                         <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">About</a>
                         <a href="#experience" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">Experience</a>
                         <a href="#skills" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">Skills</a>
                         <a href="#education" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">Education</a>
                         <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium relative hover-underline">Contact</a>
                     </nav>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-button p-2 rounded-md hover:bg-gray-100" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" class="w-6 h-6 text-gray-600"></i>
+                    </button>
                 </div>
+
+                <!-- Mobile Menu -->
+                <nav class="mobile-menu">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 font-medium">Experience</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 font-medium">Skills</a>
+                    <a href="#education" class="text-gray-600 hover:text-blue-600 font-medium">Education</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+                </nav>
             </div>
         </header>
 
@@ -50,11 +105,11 @@
                         />
                     </div>
                     <div class="flex-1 text-center md:text-left">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Software Developer & AI Engineer</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Salesforce Developer</h2>
                         <p class="text-lg text-blue-600 mb-4">6x Salesforce Certified | AI & Machine Learning | Full-Stack Development</p>
                         <p class="text-gray-600 mb-6">
-                            Passionate about tech and innovation. Proficient in C, C++, Python, Java, JavaScript, and Apex. 
-                            Excited about Machine Learning and NLP. Let's connect and explore new horizons!
+                            Experienced Salesforce Developer at Cloud SynApps with expertise in Apex, LWC, Flows, and OmniStudio. 
+                            Specialized in developing and configuring Salesforce solutions across multiple projects.
                         </p>
                         <div class="flex flex-wrap gap-4 justify-center md:justify-start">
                             <a 
@@ -76,13 +131,11 @@
                                 GitHub
                             </a>
                             <a 
-                                href="https://drive.google.com/file/d/18gi9N4RcLFvh5sp3JQUhHSuKNqd1rd1_/view?usp=sharing" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
+                                href="mailto:Nikhil.Shivpuriya@cloudsynapps.com" 
                                 class="flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition-colors"
                             >
-                                <i data-lucide="file-text" class="w-5 h-5"></i>
-                                Download Resume
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                                Email
                             </a>
                         </div>
                     </div>
@@ -95,38 +148,38 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div class="space-y-6">
                         <p class="text-gray-600 leading-relaxed">
-                            Fueled by Curiosity, Driven by Innovation. Passionate about turning ideas into impactful solutions, 
-                            I thrive on exploring the intersection of technology and creativity. From developing robust software 
-                            to diving deep into the intricacies of AI and Machine Learning, I continuously seek opportunities to 
-                            learn, grow, and make a difference. Let's innovate together and create something extraordinary!
+                            I am a Salesforce Developer at Cloud SynApps with multiple years of experience in developing and configuring 
+                            Salesforce solutions across multiple projects. I have worked extensively with OmniStudio, LWC, Apex, and Flows, 
+                            ensuring seamless automation and high-quality development. My expertise includes designing scalable solutions, 
+                            optimizing community portals, and implementing OAuth2.0-based authentication.
                         </p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
-                                <i data-lucide="calendar" class="w-5 h-5 text-blue-600"></i>
+                                <i data-lucide="phone" class="w-5 h-5 text-blue-600"></i>
                                 <div>
-                                    <p class="text-sm text-gray-500">Birthday</p>
-                                    <p class="text-gray-700">29 Oct 2000</p>
+                                    <p class="text-sm text-gray-500">Phone</p>
+                                    <p class="text-gray-700">+91 777-1928-222</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
                                 <i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i>
                                 <div>
-                                    <p class="text-sm text-gray-500">City</p>
-                                    <p class="text-gray-700">Indore, India</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
-                                <i data-lucide="graduation-cap" class="w-5 h-5 text-blue-600"></i>
-                                <div>
-                                    <p class="text-sm text-gray-500">Degree</p>
-                                    <p class="text-gray-700">B.Tech in CSE</p>
+                                    <p class="text-sm text-gray-500">Location</p>
+                                    <p class="text-gray-700">India</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
                                 <i data-lucide="mail" class="w-5 h-5 text-blue-600"></i>
                                 <div>
                                     <p class="text-sm text-gray-500">Email</p>
-                                    <p class="text-gray-700 break-all">nikhilshivpuriya91593@gmail.com</p>
+                                    <p class="text-gray-700 break-all">Nikhil.Shivpuriya@cloudsynapps.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                                <i data-lucide="languages" class="w-5 h-5 text-blue-600"></i>
+                                <div>
+                                    <p class="text-sm text-gray-500">Languages</p>
+                                    <p class="text-gray-700">English, Hindi</p>
                                 </div>
                             </div>
                         </div>
@@ -134,8 +187,43 @@
                     <div class="space-y-6">
                         <div class="bg-blue-50 rounded-lg p-6">
                             <h4 class="text-xl font-semibold text-gray-900 mb-4">Certifications</h4>
-                            <div class="space-y-4" id="certifications">
-                                <!-- Certifications will be added dynamically -->
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+                                    <i data-lucide="award" class="w-6 h-6 text-blue-600 flex-shrink-0"></i>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Salesforce Certified AI Specialist</h5>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+                                    <i data-lucide="award" class="w-6 h-6 text-blue-600 flex-shrink-0"></i>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Salesforce Certified AI Associate</h5>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+                                    <i data-lucide="award" class="w-6 h-6 text-blue-600 flex-shrink-0"></i>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Salesforce Certified JavaScript Developer I</h5>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+                                    <i data-lucide="award" class="w-6 h-6 text-blue-600 flex-shrink-0"></i>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Salesforce Certified OmniStudio Developer</h5>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+                                    <i data-lucide="award" class="w-6 h-6 text-blue-600 flex-shrink-0"></i>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Salesforce Certified Platform Developer I</h5>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+                                    <i data-lucide="award" class="w-6 h-6 text-blue-600 flex-shrink-0"></i>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Salesforce Certified Administrator</h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -146,7 +234,7 @@
             <section id="experience" class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
                 <h3 class="text-2xl font-bold text-gray-900 mb-6">Professional Experience</h3>
                 <div class="space-y-8">
-                    <!-- Salesforce Developer Role -->
+                    <!-- Cloud SynApps -->
                     <div class="relative pl-8 pb-8 border-l-2 border-blue-200">
                         <div class="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-0"></div>
                         <div class="space-y-4">
@@ -154,16 +242,78 @@
                                 <h4 class="text-xl font-semibold text-gray-900">Salesforce Developer</h4>
                                 <span class="text-blue-600">@ Cloud SynApps</span>
                             </div>
-                            <p class="text-gray-600">2023 - Present • Pune, India</p>
-                            <div class="prose text-gray-600">
-                                <ul class="list-disc pl-4 space-y-2">
-                                    <li>Developed and integrated the CSA AI (Currently on App-Exchange) using OpenAI's CustomGPT.</li>
-                                    <li>Led key features of a client's Grant Management portal.</li>
-                                    <li>Recognized with 'Outstanding Team Player' award.</li>
+                            <p class="text-gray-600">June 2023 - Present</p>
+                            
+                            <!-- CSA AI Project -->
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-900 mb-2">CSA AI (Aug'23 to Feb'24)</h5>
+                                <p class="text-gray-600 mb-3">
+                                    Question Answering Chatbot using AI/NLP technologies for natural language interface.
+                                </p>
+                                <ul class="list-disc pl-4 space-y-2 text-gray-600">
+                                    <li>Engaged with leadership team for requirements analysis and solution design</li>
+                                    <li>Explored and developed AI/ML technology demos</li>
+                                    <li>Implemented LWC user interface</li>
+                                    <li>Developed custom LWC and Apex classes</li>
+                                    <li>Set up Azure Pipeline for deployment</li>
+                                    <li>Conducted testing and quality assurance</li>
                                 </ul>
                             </div>
-                            <div class="flex flex-wrap gap-2" id="salesforce-skills">
-                                <!-- Skills will be added dynamically -->
+
+                            <!-- Sourcewell Grant Management -->
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-900 mb-2">Sourcewell Grant Management (Feb'24 to Oct'24)</h5>
+                                <p class="text-gray-600 mb-3">
+                                    Streamlined grant application system using OmniStudio components and automated workflows.
+                                </p>
+                                <ul class="list-disc pl-4 space-y-2 text-gray-600">
+                                    <li>Developed guided flows using Omniscript and FlexCards</li>
+                                    <li>Implemented UI/UX enhancements for community portal</li>
+                                    <li>Configured secure user login and automated notifications</li>
+                                    <li>Maintained project documentation and managed deployments</li>
+                                </ul>
+                            </div>
+
+                            <!-- City of St. Louis -->
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-900 mb-2">City of St. Louis (Sept'24 to Nov'24)</h5>
+                                <p class="text-gray-600 mb-3">
+                                    Enhanced community portal with LWC components and automated workflows.
+                                </p>
+                                <ul class="list-disc pl-4 space-y-2 text-gray-600">
+                                    <li>Designed and developed Lightning Web Components</li>
+                                    <li>Built Omniscript and DataRaptor workflows</li>
+                                    <li>Created automated notification flows</li>
+                                    <li>Performed testing and deployment</li>
+                                </ul>
+                            </div>
+
+                            <!-- Arizona State Board -->
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-900 mb-2">Arizona State Board (ASBCS) (Nov'24 to Present)</h5>
+                                <p class="text-gray-600 mb-3">
+                                    Platform maintenance and enhancement for charter schools management.
+                                </p>
+                                <ul class="list-disc pl-4 space-y-2 text-gray-600">
+                                    <li>Resolved live environment issues</li>
+                                    <li>Optimized Community site components</li>
+                                    <li>Enhanced UI based on user feedback</li>
+                                    <li>Developed and modified Apex components</li>
+                                </ul>
+                            </div>
+
+                            <!-- OH HFO Jobs Portal -->
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-900 mb-2">OH HFO Jobs Portal Phase 1 (Jan'25 to Present)</h5>
+                                <p class="text-gray-600 mb-3">
+                                    Implementing job portal with OAuth 2.0 authentication.
+                                </p>
+                                <ul class="list-disc pl-4 space-y-2 text-gray-600">
+                                    <li>Implemented OAuth2.0 with OneID integration</li>
+                                    <li>Developed LWC and Visualforce pages</li>
+                                    <li>Created Apex controllers for job management</li>
+                                    <li>Automated application processes</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -179,12 +329,44 @@
                             <p class="text-gray-600">January 2023 - June 2023 • Remote</p>
                             <div class="prose text-gray-600">
                                 <ul class="list-disc pl-4 space-y-2">
-                                    <li>Developed expertise in MEVN stack technologies.</li>
-                                    <li>Created 4 websites as a part of project within 1.5 months.</li>
+                                    <li>Developed expertise in MEVN stack technologies</li>
+                                    <li>Created 4 websites within 1.5 months</li>
+                                    <li>Collaborated in team projects</li>
+                                    <li>Managed project timelines effectively</li>
                                 </ul>
                             </div>
-                            <div class="flex flex-wrap gap-2" id="mevn-skills">
-                                <!-- Skills will be added dynamically -->
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">MongoDB</span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Express.js</span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Vue.js</span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Java Full Stack Intern Role -->
+                    <div class="relative pl-8 pb-8 border-l-2 border-blue-200">
+                        <div class="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-0"></div>
+                        <div class="space-y-4">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h4 class="text-xl font-semibold text-gray-900">Java Full Stack Intern</h4>
+                                <span class="text-blue-600">@ Global Quest Technologies</span>
+                            </div>
+                            <p class="text-gray-600">July 2022 - January 2023 • Remote</p>
+                            <div class="prose text-gray-600">
+                                <ul class="list-disc pl-4 space-y-2">
+                                    <li>Developed full-stack applications using Java</li>
+                                    <li>Conducted manual testing and wrote test cases</li>
+                                    <li>Expanded expertise in Python development</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Java</span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Spring Boot</span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Manual Testing</span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Full Stack</span>
                             </div>
                         </div>
                     </div>
@@ -193,12 +375,55 @@
 
             <!-- Skills Section -->
             <section id="skills" class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Skills</h3>
-                <p class="text-gray-600 mb-8">
-                    Here are the tools, technologies, and abilities that help me craft innovative solutions and deliver impactful results.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="skills-grid">
-                    <!-- Skills will be added dynamically -->
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Skills & Technologies</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Salesforce Skills -->
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-semibold text-gray-900">Salesforce Core Skills</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Apex</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">LWC</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Flows</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">API Integration</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Platform Development</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Deployment</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">OmniScript</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Process Automation</span>
+                        </div>
+                    </div>
+
+                    <!-- Other Languages -->
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-semibold text-gray-900">Programming Languages</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">CSS</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Java</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">C/C++</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">SQL</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">MongoDB</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Technologies -->
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-semibold text-gray-900">Tools & Technologies</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">AWS</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Git</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">CUDA</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Azure DevOps</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">VSC</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Workbench</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">Copado</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">DataLoader</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -218,156 +443,13 @@
                         <p class="text-blue-600">Percentage: 78%</p>
                         <p class="text-gray-600">Central Board of Secondary Education</p>
                     </div>
+                    <div class="border-l-4 border-blue-600 pl-4 hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                        <h4 class="text-xl font-semibold text-gray-900">High School</h4>
+                        <p class="text-gray-600">Sahara Public School • 2016</p>
+                        <p class="text-blue-600">CGPA: 9.6</p>
+                        <p class="text-gray-600">Central Board of Secondary Education</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Contact Section -->
-            <section id="contact" class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <a 
-                        href="https://www.linkedin.com/in/nikhilshivpuriya/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all"
-                    >
-                        <i data-lucide="linkedin" class="w-6 h-6 text-blue-600"></i>
-                        <div>
-                            <h4 class="font-semibold">LinkedIn</h4>
-                            <p class="text-sm text-gray-600">Connect with me</p>
-                        </div>
-                        <i data-lucide="external-link" class="w-5 h-5 ml-auto text-gray-400"></i>
-                    </a>
-                    <a 
-                        href="https://github.com/nikhilshivpuriya29"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all"
-                    >
-                        <i data-lucide="github" class="w-6 h-6 text-blue-600"></i>
-                        <div>
-                            <h4 class="font-semibold">GitHub</h4>
-                            <p class="text-sm text-gray-600">View my projects</p>
-                        </div>
-                        <i data-lucide="external-link" class="w-5 h-5 ml-auto text-gray-400"></i>
-                    </a>
-                    <a 
-                        href="mailto:nikhilshivpuriya91593@gmail.com"
-                        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all"
-                    >
-                        <i data-lucide="mail" class="w-6 h-6 text-blue-600"></i>
-                        <div>
-                            <h4 class="font-semibold">Email</h4>
-                            <p class="text-sm text-gray-600">Send me a message</p>
-                        </div>
-                    </a>
-                    <a 
-                        href="tel:+917771928222"
-                        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all"
-                    >
-                        <i data-lucide="phone" class="w-6 h-6 text-blue-600"></i>
-                        <div>
-                            <h4 class="font-semibold">Phone</h4>
-                            <p class="text-sm text-gray-600">+91 777 1928 222</p>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </main>
-
-        <footer class="bg-white border-t">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                <p class="text-center text-gray-600">
-                    © <span id="current-year"></span> Nikhil Shivpuriya. All rights reserved.
-                </p>
-            </div>
-        </footer>
-    </div>
-
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Add certifications
-        const certifications = [
-            {
-                title: "Salesforce Certified AI Specialist",
-                description: "Advanced certification in Salesforce AI implementation and integration"
-            },
-            {
-                title: "Salesforce Certified AI Associate",
-                description: "Specialized certification in Salesforce AI fundamentals"
-            },
-            {
-                title: "Salesforce Certified JavaScript Developer I",
-                description: "Expert-level certification in JavaScript development for Salesforce"
-            },
-            {
-                title: "Salesforce Certified OmniStudio Developer",
-                description: "Specialized in OmniStudio development and implementation"
-            },
-            {
-                title: "Salesforce Certified Platform Developer I",
-                description: "Core certification in Salesforce platform development"
-            },
-            {
-                title: "Salesforce Certified Administrator",
-                description: "Foundation certification in Salesforce administration"
-            }
-        ];
-
-        document.getElementById('certifications').innerHTML = certifications.map(cert => `
-            <a href="#" class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
-                <i data-lucide="award" class="w-6 h-6 text-blue-600 flex-shrink-0"></i>
-                <div>
-                    <h5 class="font-semibold text-gray-900">${cert.title}</h5>
-                    <p class="text-sm text-gray-600">${cert.description}</p>
-                </div>
-            </a>
-        `).join('');
-
-        // Add skills
-        const skills = [
-            { name: "Salesforce Development", percentage: 100 },
-            { name: "CSS", percentage: 97 },
-            { name: "C/C++", percentage: 95 },
-            { name: "JAVA", percentage: 98 },
-            { name: "JavaScript", percentage: 85 },
-            { name: "HTML", percentage: 100 },
-            { name: "WordPress/CMS", percentage: 90 },
-            { name: "Machine Learning", percentage: 82 },
-            { name: "Python", percentage: 100 },
-            { name: "Apex", percentage: 97 }
-        ];
-
-        document.getElementById('skills-grid').innerHTML = skills.map(skill => `
-            <div class="space-y-2 p-4 rounded-lg hover:bg-blue-50 transition-colors">
-                <div class="flex justify-between">
-                    <span class="text-gray-700 font-medium">${skill.name}</span>
-                    <span class="text-blue-600">${skill.percentage}%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                    <div class="bg-blue-600 h-2.5 rounded-full transition-all duration-500" style="width: ${skill.percentage}%"></div>
-                </div>
-            </div>
-        `).join('');
-
-        // Add experience skills
-        const salesforceSkills = ['APEX', 'JavaScript', 'OmniStudio', 'LWC', 'Aura Framework', 'Flows', 'OpenAI'];
-        document.getElementById('salesforce-skills').innerHTML = salesforceSkills.map(tech => `
-            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">${tech}</span>
-        `).join('');
-
-        const mevnSkills = ['MongoDB', 'Express.js', 'Vue.js', 'Node.js', 'JavaScript'];
-        document.getElementById('mevn-skills').innerHTML = mevnSkills.map(tech => `
-            <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">${tech}</span>
-        `).join('');
-
-        // Re-initialize icons after dynamic content
-        lucide.createIcons();
-    </script>
-</body>
-</html>
+            <!--
