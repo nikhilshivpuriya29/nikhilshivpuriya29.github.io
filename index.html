@@ -1,77 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikhil Shivpuriya - Portfolio</title>
-    <link rel="icon" type="image/png" href="https://media.licdn.com/dms/image/v2/D4D03AQEWJRS6V7pUbA/profile-displayphoto-shrink_800_800/B4DZR_PZkdHkAc-/0/1737301531993?e=1743033600&v=beta&t=b9Gz_yFIe4QMi6iOAOcwHsyn_FRFKIvLSd-fqbqcUJE">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .hover-underline:hover::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #2563eb;
-            transform: scaleX(1);
-            transition: transform 0.2s ease;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikhil Shivpuriya | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 
-        /* Mobile menu styles */
-        .mobile-menu-button {
-            display: none;
-        }
-
-        .mobile-menu {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .desktop-menu {
-                display: none;
-            }
-            .mobile-menu-button {
-                display: block;
-            }
-            .mobile-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                padding: 1rem;
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            }
-            .mobile-menu.active {
-                display: block;
-            }
-            .mobile-menu a {
-                display: block;
-                padding: 0.75rem 0;
-                border-bottom: 1px solid #e5e7eb;
-            }
-            .mobile-menu a:last-child {
-                border-bottom: none;
-            }
-        }
-    </style>
+  <style>
+    .hover-scale {
+      transition: transform 0.3s;
+    }
+    .hover-scale:hover {
+      transform: scale(1.02);
+    }
+  </style>
 </head>
-<body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-blue-600">Nikhil Shivpuriya</h1>
+        <nav class="flex space-x-6">
+          <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
+          <a href="#experience" class="text-gray-600 hover:text-blue-600 font-medium">Experience</a>
+          <a href="#skills" class="text-gray-600 hover:text-blue-600 font-medium">Skills</a>
+          <a href="#education" class="text-gray-600 hover:text-blue-600 font-medium">Education</a>
+          <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-        // Mobile menu toggle functionality
-        function toggleMobileMenu() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            mobileMenu.classList.toggle('active');
-        }
-    </script>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+    <!-- Hero Section -->
+    <section class="bg-white rounded-lg shadow-lg p-8 hover-scale">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="w-48 h-48 rounded-full overflow-hidden ring-4 ring-blue-100 shadow-lg">
+          <img src="./public/11zon_cropped (2).png" alt="Nikhil Shivpuriya" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex-1 text-center md:text-left">
+          <h2 class="text-3xl font-bold text-gray-900 mb-2">Software Developer & AI Engineer</h2>
+          <p class="text-lg text-blue-600 mb-4">6x Salesforce Certified | AI & Machine Learning | Full-Stack Development</p>
+          <p class="text-gray-600 mb-6">
+            Passionate about tech and innovation. Proficient in C, C++, Python, Java, JavaScript, and Apex.
+            Excited about Machine Learning and NLP. Let's connect and explore new horizons!
+          </p>
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+
+  <a href="https://www.linkedin.com/in/nikhilshivpuriya/" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+    <!-- LinkedIn Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24" >
+      <path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.1 1 2.5 1 4.98 2.12 4.98 3.5zM.2 8h4.8v14H.2V8zM7.82 8h4.6v1.9h.06c.64-1.2 2.21-2.47 4.55-2.47 4.86 0 5.76 3.2 5.76 7.35V22H18v-7.5c0-1.8-.03-4.13-2.52-4.13-2.53 0-2.92 1.98-2.92 4.02V22h-4.6V8z"/>
+    </svg>
+    LinkedIn
+  </a>
+
+  <a href="https://github.com/nikhilshivpuriya29" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900">
+    <!-- GitHub Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24" >
+      <path d="M12 .5C5.65.5.5 5.67.5 12.04c0 5.12 3.29 9.47 7.85 11.01.57.1.78-.25.78-.55v-1.98c-3.19.7-3.86-1.56-3.86-1.56-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.19 1.75 1.19 1.02 1.77 2.68 1.26 3.33.96.1-.74.4-1.26.73-1.55-2.55-.3-5.23-1.27-5.23-5.66 0-1.25.44-2.27 1.17-3.07-.12-.3-.51-1.5.11-3.13 0 0 .96-.31 3.14 1.17a10.9 10.9 0 012.86-.4c.97 0 1.95.13 2.86.4 2.18-1.48 3.14-1.17 3.14-1.17.62 1.63.23 2.83.11 3.13.73.8 1.16 1.82 1.16 3.07 0 4.4-2.7 5.35-5.27 5.63.41.36.77 1.08.77 2.18v3.22c0 .3.2.66.79.54A11.54 11.54 0 0023.5 12c0-6.37-5.15-11.5-11.5-11.5z"/>
+    </svg>
+    GitHub
+  </a>
+
+  <a href="https://drive.google.com/file/d/1v2KCgeC5IIwbfDWNNlvj8dnOri5MB2So/view?usp=drivesdk" target="_blank" class="flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50">
+    <!-- Resume / File Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14 2v6h6"/>
+    </svg>
+    Download Resume
+  </a>
+
+</div>
+
+        </div>
+      </div>
+    </section>
+
+  <section id="about" class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+  <h3 class="text-2xl font-bold text-gray-900 mb-6">About Me</h3>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Left: About and info cards -->
+    <div class="space-y-6">
+      <p class="text-gray-600 leading-relaxed">
+        Fueled by Curiosity, Driven by Innovation. Passionate about turning ideas into impactful solutions, 
+        I thrive on exploring the intersection of technology and creativity. From developing robust software 
+        to diving deep into the intricacies of AI and Machine Learning, I continuously seek opportunities to 
+        learn, grow, and make a difference. Let's innovate together and create something extraordinary!
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Birthday -->
+        <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+          <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2v-7H3v7a2 2 0 002 2z" />
+          </svg>
+          <div>
+            <p class="text-sm text-gray-500">Birthday</p>
+            <p class="text-gray-700">29 Oct 2000</p>
+          </div>
+        </div>
+        <!-- Website -->
+        <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+          <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.5 12h19" />
+          </svg>
+          <div>
+            <p class="text-sm text-gray-500">Website</p>
+            <p class="text-gray-700"></p>
+          </div>
+        </div>
+        <!-- City -->
+        <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+          <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.657 0 3-1.567 3-3.5S13.657 4 12 4 9 5.567 9 7.5 10.343 11 12 11z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11v10m-4-4h8" />
+          </svg>
+          <div>
+            <p class="text-sm text-gray-500">City</p>
+            <p class="text-gray-700">Indore, India</p>
+          </div>
+        </div>
+        <!-- Degree -->
+        <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+          <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v7" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14L3 9" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 9l-9 5" />
+          </svg>
+          <div>
+            <p class="text-sm text-gray-500">Degree</p>
+            <p class="text-gray-700">B.Tech in CSE</p>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors break-all">
+          <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8-4H8m8 8H8m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <div>
+            <p class="text-sm text-gray-500">Email</p>
+            <p class="text-gray-700">nikhilshivpuriya91593@gmail.com</p>
+          </div>
+        </div>
+        <!-- Empty Briefcase placeholder (you can add job title or remove) -->
+        <div class="flex items-center gap-2 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+          <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 7h12M9 10h6M4 14h16v4H4v-4z" />
+          </svg>
+          <div>
+            <p class="text-sm text-gray-500"></p>
+            <p class="text-gray-700"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Certifications -->
+    <div class="space-y-6">
+      <div class="bg-blue-50 rounded-lg p-6">
+        <h4 class="text-xl font-semibold text-gray-900 mb-4">Certifications</h4>
+        <div class="space-y-4">
+          <!-- Repeat this block for each certification -->
+          <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=qwb/xNzlCOX2LwV2Ixq+2j8H0/UaKd+ylq7W4QfzYZbfXpGsaBvJQtMZE71wr3k6" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+            <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 7h10M5 20h14a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" />
+            </svg>
+            <div>
+              <h5 class="font-semibold text-gray-900">Salesforce Certified AI Specialist</h5>
+              <p class="text-sm text-gray-600">Advanced certification in Salesforce AI implementation and integration</p>
+            </div>
+          </a>
+
+          <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=qwb/xNzlCOX2LwV2Ixq+2j8H0/UaKd+ylq7W4QfzYZbfXpGsaBvJQtMZE71wr3k6" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+            <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 7h10M5 20h14a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" />
+            </svg>
+            <div>
+              <h5 class="font-semibold text-gray-900">Salesforce Certified AI Associate</h5>
+              <p class="text-sm text-gray-600">Specialized certification in Salesforce AI fundamentals</p>
+            </div>
+          </a>
+
+          <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=qwb/xNzlCOX2LwV2Ixq+2j8H0/UaKd+ylq7W4QfzYZbfXpGsaBvJQtMZE71wr3k6" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+            <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 7h10M5 20h14a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" />
+            </svg>
+            <div>
+              <h5 class="font-semibold text-gray-900">Salesforce Certified JavaScript Developer I</h5>
+              <p class="text-sm text-gray-600">Expert-level certification in JavaScript development for Salesforce</p>
+            </div>
+          </a>
+
+          <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=qwb/xNzlCOX2LwV2Ixq+2j8H0/UaKd+ylq7W4QfzYZbfXpGsaBvJQtMZE71wr3k6" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+            <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 7h10M5 20h14a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" />
+            </svg>
+            <div>
+              <h5 class="font-semibold text-gray-900">Salesforce Certified OmniStudio Developer</h5>
+              <p class="text-sm text-gray-600">Specialized in OmniStudio development and implementation</p>
+            </div>
+          </a>
+
+          <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=qwb/xNzlCOX2LwV2Ixq+2j8H0/UaKd+ylq7W4QfzYZbfXpGsaBvJQtMZE71wr3k6" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+            <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 7h10M5 20h14a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" />
+            </svg>
+            <div>
+              <h5 class="font-semibold text-gray-900">Salesforce Certified Platform Developer I</h5>
+              <p class="text-sm text-gray-600">Core certification in Salesforce platform development</p>
+            </div>
+          </a>
+
+          <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=qwb/xNzlCOX2LwV2Ixq+2j8H0/UaKd+ylq7W4QfzYZbfXpGsaBvJQtMZE71wr3k6" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-md hover:bg-white transition-colors">
+            <svg class="text-blue-600 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 7h10M5 20h14a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" />
+            </svg>
+            <div>
+              <h5 class="font-semibold text-gray-900">Salesforce Certified Administrator</h5>
+              <p class="text-sm text-gray-600">Foundation certification in Salesforce administration</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  {/* Experience Section */}
+<section id="experience" className="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+  <h3 className="text-2xl font-bold text-gray-900 mb-6">Professional Experience</h3>
+  <div className="space-y-8">
+    {/* Salesforce Developer Role */}
+    <div className="relative pl-8 pb-8 border-l-2 border-blue-200">
+      <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-0"></div>
+      <div className="space-y-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <h4 className="text-xl font-semibold text-gray-900">Salesforce Developer</h4>
+          <span className="text-blue-600">@ Cloud SynApps</span>
+        </div>
+        <p className="text-gray-600">2023 - Present • Pune, India</p>
+        <div className="prose text-gray-600">
+          <ul className="list-disc pl-4 space-y-2">
+            <li>Developed and integrated the CSA AI (Currently on App-Exchange) using OpenAI's CustomGPT, enhancing Salesforce functionality for intelligent document processing and data retrieval.</li>
+            <li>Led key features of a client's Grant Management portal, implementing FlexCards, layouts, flows, and email actions to optimize user experience and efficiency.</li>
+            <li>Supervised the assessment of all graphic materials to ensure quality and accuracy of the design.</li>
+            <li>Collaborated with teams to improve project delivery timelines by 20%, consistently meeting milestones and ensuring high-quality, on-time results.</li>
+            <li>Built and implemented custom Apex classes and Lightning Web Components(LWCs), focusing on scalable, secure, and high-performance solutions.</li>
+            <li>Recognized with 'Outstanding Team Player' award for exceptional teamwork, technical expertise, and problem-solving across critical projects.</li>
+          </ul>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {['APEX', 'JavaScript', 'OmniStudio', 'LWC', 'Aura Framework', 'Flows', 'OpenAI'].map((tech) => (
+            <span key={tech} className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* MEVN Trainee Role */}
+    <div className="relative pl-8 pb-8 border-l-2 border-blue-200">
+      <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-0"></div>
+      <div className="space-y-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <h4 className="text-xl font-semibold text-gray-900">MEVN Trainee</h4>
+          <span className="text-blue-600">@ Fynd Academy</span>
+        </div>
+        <p className="text-gray-600">January 2023 - June 2023 • Remote</p>
+        <div className="prose text-gray-600">
+          <ul className="list-disc pl-4 space-y-2">
+            <li>Developed expertise in MEVN stack technologies, including MongoDB, Express.js, Vue.js, and Node.js.</li>
+            <li>Collaborated in a team to create multiple projects, showcasing proficiency in front-end and back-end development.</li>
+            <li>Took ownership of projects, managing timelines and delivering high-quality results.</li>
+            <li>Created 4 websites as a part of project within 1.5 months.</li>
+          </ul>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {['MongoDB', 'Express.js', 'Vue.js', 'Node.js', 'JavaScript'].map((tech) => (
+            <span key={tech} className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Java Full Stack Intern Role */}
+    <div className="relative pl-8 pb-8 border-l-2 border-blue-200">
+      <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-0"></div>
+      <div className="space-y-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <h4 className="text-xl font-semibold text-gray-900">Java Full Stack Intern</h4>
+          <span className="text-blue-600">@ Global Quest Technologies</span>
+        </div>
+        <p className="text-gray-600">July 2022 - January 2023 • Remote</p>
+        <div className="prose text-gray-600">
+          <ul className="list-disc pl-4 space-y-2">
+            <li>Developed full-stack applications using Java, showcasing proficiency in frontend and backend development.</li>
+            <li>Received training in manual testing, demonstrating skills in writing test cases and ensuring high-quality deliverables.</li>
+            <li>Expanded expertise to include Python development, utilizing it for tasks such as data manipulation and automation.</li>
+          </ul>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {['Java', 'Spring Boot', 'Python', 'Manual Testing', 'Full Stack'].map((tech) => (
+            <span key={tech} className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/* Skills Section */}
+<section
+  id="skills"
+  className="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300"
+>
+  <h3 className="text-2xl font-bold text-gray-900 mb-6">Skills</h3>
+  <p className="text-gray-600 mb-8">
+    Here are the tools, technologies, and abilities that help me craft innovative
+    solutions and deliver impactful results.
+  </p>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {[
+      { name: "Salesforce Development", percentage: 100 },
+      { name: "CSS", percentage: 97 },
+      { name: "C/C++", percentage: 95 },
+      { name: "JAVA", percentage: 98 },
+      { name: "JavaScript", percentage: 85 },
+      { name: "HTML", percentage: 100 },
+      { name: "WordPress/CMS", percentage: 90 },
+      { name: "Machine Learning", percentage: 82 },
+      { name: "Python", percentage: 100 },
+      { name: "Apex", percentage: 97 },
+    ].map((skill) => (
+      <div
+        key={skill.name}
+        className="space-y-2 p-4 rounded-lg hover:bg-blue-50 transition-colors"
+      >
+        <div className="flex justify-between">
+          <span className="text-gray-700 font-medium">{skill.name}</span>
+          <span className="text-blue-600">{skill.percentage}%</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div
+            className="bg-blue-600 h-2.5 rounded-full transition-all duration-500"
+            style={{ width: `${skill.percentage}%` }}
+          ></div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+ {/* Education Section */}
+<section
+  id="education"
+  className="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300"
+>
+  <h3 className="text-2xl font-bold text-gray-900 mb-6">Education</h3>
+  <div className="space-y-8">
+    <div className="border-l-4 border-blue-600 pl-4 hover:bg-blue-50 p-4 rounded-lg transition-colors">
+      <h4 className="text-xl font-semibold text-gray-900">
+        B.Tech in Computer Science and Engineering
+      </h4>
+      <p className="text-gray-600">
+        Samrat Ashok Technological Institute, Vidisha • 2019 - 2023
+      </p>
+      <p className="text-blue-600">CGPA: 8.44</p>
+      <p className="text-gray-600">Rajiv Gandhi Proudyogiki Vishwavidyalaya</p>
+    </div>
+    <div className="border-l-4 border-blue-600 pl-4 hover:bg-blue-50 p-4 rounded-lg transition-colors">
+      <h4 className="text-xl font-semibold text-gray-900">Senior Secondary (PCM)</h4>
+      <p className="text-gray-600">Sahara Public School • 2018</p>
+      <p className="text-blue-600">Percentage: 78%</p>
+      <p className="text-gray-600">Central Board of Secondary Education</p>
+    </div>
+    <div className="border-l-4 border-blue-600 pl-4 hover:bg-blue-50 p-4 rounded-lg transition-colors">
+      <h4 className="text-xl font-semibold text-gray-900">High School</h4>
+      <p className="text-gray-600">Sahara Public School • 2016</p>
+      <p className="text-blue-600">CGPA: 9.6</p>
+      <p className="text-gray-600">Central Board of Secondary Education</p>
+    </div>
+  </div>
+</section>
+
+{/* Contact Section */}
+<section
+  id="contact"
+  className="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300"
+>
+  <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* Contact Information */}
+    <div className="space-y-6">
+      <p className="text-gray-600 leading-relaxed">
+        I'm always interested in hearing about new opportunities, projects, and collaborations. 
+        Feel free to reach out through any of the following channels:
+      </p>
+      <div className="space-y-4">
+        <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-50 transition-colors">
+          <Phone className="text-blue-600 w-6 h-6" />
+          <div>
+            <h4 className="font-semibold text-gray-900">Phone</h4>
+            <a href="tel:+917771928222" className="text-gray-600 hover:text-blue-600">
+              +91 777-1928-222
+            </a>
+          </div>
+        </div>
+        <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-50 transition-colors">
+          <Mail className="text-blue-600 w-6 h-6" />
+          <div>
+            <h4 className="font-semibold text-gray-900">Email</h4>
+            <a href="mailto:Nikhil.Shivpuriya@cloudsynapps.com" className="text-gray-600 hover:text-blue-600 break-all">
+              Nikhil.Shivpuriya@cloudsynapps.com
+            </a>
+          </div>
+        </div>
+        <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-50 transition-colors">
+          <MapPin className="text-blue-600 w-6 h-6" />
+          <div>
+            <h4 className="font-semibold text-gray-900">Location</h4>
+            <p className="text-gray-600">Indore, India</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-50 transition-colors">
+          <Languages className="text-blue-600 w-6 h-6" />
+          <div>
+            <h4 className="font-semibold text-gray-900">Languages</h4>
+            <p className="text-gray-600">English, Hindi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {/* You can add a contact form or other content in the second column if needed */}
+  </div>
+</section>
+{/* Social Links */}
+  <section>
+      <h4>Connect with me</h4>
+      <div>
+        <a href="https://www.linkedin.com/in/nikhilshivpuriya/" target="_blank" rel="noopener noreferrer">
+          <i data-feather="linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/nikhilshivpuriya29" target="_blank" rel="noopener noreferrer">
+          <i data-feather="github"></i> GitHub
+        </a>
+        <a href="https://drive.google.com/file/d/1v2KCgeC5IIwbfDWNNlvj8dnOri5MB2So/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+          <i data-feather="file-text"></i> Resume
+        </a>
+      </div>
+    </section>
+</main>
+
+<footer className="bg-white border-t mt-12">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <p className="text-center text-gray-600">
+      © {new Date().getFullYear()} Nikhil Shivpuriya. All rights reserved.
+    </p>
+  </div>
+</footer>
+</div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
