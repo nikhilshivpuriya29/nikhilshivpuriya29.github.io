@@ -32,20 +32,50 @@
 </head>
 
 <body class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div class="flex items-center justify-between">
-        <h1 class="text-2xl font-bold text-blue-600">Nikhil Shivpuriya</h1>
-        <nav class="flex space-x-6">
-          <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
-          <a href="#experience" class="text-gray-600 hover:text-blue-600 font-medium">Experience</a>
-          <a href="#skills" class="text-gray-600 hover:text-blue-600 font-medium">Skills</a>
-          <a href="#education" class="text-gray-600 hover:text-blue-600 font-medium">Education</a>
-          <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <!-- Logo / Title -->
+    <h1 class="text-2xl font-bold text-blue-600">Nikhil Shivpuriya</h1>
+
+    <!-- Desktop Navigation -->
+    <nav id="desktop-menu" class="hidden md:flex space-x-6">
+      <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
+      <a href="#experience" class="text-gray-600 hover:text-blue-600 font-medium">Experience</a>
+      <a href="#skills" class="text-gray-600 hover:text-blue-600 font-medium">Skills</a>
+      <a href="#education" class="text-gray-600 hover:text-blue-600 font-medium">Education</a>
+      <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+    </nav>
+
+    <!-- Mobile Burger Button -->
+    <button id="burger-btn" class="md:hidden text-blue-600 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Vertical Menu -->
+  <nav id="mobile-menu" class="hidden flex-col space-y-4 px-4 pb-4 md:hidden border-t border-gray-200">
+    <a href="#about" class="block text-gray-600 hover:text-blue-600 font-medium py-2">About</a>
+    <a href="#experience" class="block text-gray-600 hover:text-blue-600 font-medium py-2">Experience</a>
+    <a href="#skills" class="block text-gray-600 hover:text-blue-600 font-medium py-2">Skills</a>
+    <a href="#education" class="block text-gray-600 hover:text-blue-600 font-medium py-2">Education</a>
+    <a href="#contact" class="block text-gray-600 hover:text-blue-600 font-medium py-2">Contact</a>
+  </nav>
+</header>
+
+<script>
+  const burgerBtn = document.getElementById('burger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  burgerBtn.addEventListener('click', () => {
+    const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+    burgerBtn.setAttribute('aria-expanded', !isExpanded);
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
     <!-- Hero Section -->
